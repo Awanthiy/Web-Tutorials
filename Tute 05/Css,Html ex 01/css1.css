@@ -1,0 +1,22 @@
+body{
+    background-image:url("awa.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.card {
+    background-color:rgba(180, 177, 177, 0.815);
+    
+    height: 300px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    text-align: center;
+     color: aliceblue;
+     
+}
