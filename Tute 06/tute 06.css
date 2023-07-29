@@ -1,0 +1,45 @@
+
+ 
+nav {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+a:hover {
+  background-color: green;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  margin-top: 20px;
+}
+.img2{
+    height: 200px;
+    width:200px;
+}
+td {
+    width: 1000px;
+    height: 50px;
+  }
