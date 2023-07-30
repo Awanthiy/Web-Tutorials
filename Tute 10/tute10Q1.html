@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Operations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      margin: 5px;
+    }
+
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Math Operations</h1>
+  <button onclick="performAddition()">Addition</button>
+  <button onclick="performSubtraction()">Subtraction</button>
+  <button onclick="performDivision()">Division</button>
+  <button onclick="performMultiplication()">Multiplication</button>
+  <div id="output"></div>
+
+  <script>
+    function performAddition() {
+      const num1 = parseFloat(prompt("Enter the first number:"));
+      const num2 = parseFloat(prompt("Enter the second number:"));
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Invalid input. Please enter valid numbers.");
+        return;
+      }
+
+      const result = num1 + num2;
+      displayResult(result);
+    }
+
+    function performSubtraction() {
+      const num1 = parseFloat(prompt("Enter the first number:"));
+      const num2 = parseFloat(prompt("Enter the second number:"));
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Invalid input. Please enter valid numbers.");
+        return;
+      }
+
+      const result = num1 - num2;
+      displayResult(result);
+    }
+
+    function performDivision() {
+      const num1 = parseFloat(prompt("Enter the first number:"));
+      const num2 = parseFloat(prompt("Enter the second number:"));
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Invalid input. Please enter valid numbers.");
+        return;
+      }
+
+      if (num2 === 0) {
+        alert("Division by zero is not allowed.");
+        return;
+      }
+
+      const result = num1 / num2;
+      displayResult(result);
+    }
+
+    function performMultiplication() {
+      const num1 = parseFloat(prompt("Enter the first number:"));
+      const num2 = parseFloat(prompt("Enter the second number:"));
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Invalid input. Please enter valid numbers.");
+        return;
+      }
+
+      const result = num1 * num2;
+      displayResult(result);
+    }
+
+    function displayResult(result) {
+      const outputDiv = document.getElementById('output');
+      outputDiv.innerHTML = `<p>Result: ${result}</p>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NIC Year of Birth</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>NIC Year of Birth</h1>
+  <label for="nic">Enter NIC number:</label>
+  <input type="text" id="nic">
+  <button onclick="getYearOfBirth()">Get Year of Birth</button>
+  <div id="output"></div>
+
+  <script>
+    function getYearOfBirth() {
+      const nic = document.getElementById('nic').value;
+      if (nic.length == 10) {
+        alert("Invalid NIC number. NIC number should be 10 characters long.");
+        return;
+      }
+
+      // Assuming the first two digits of the sequential number represent the year of birth
+      const sequentialNumber = nic.substr(2, 2); // Get the first two characters of the sequential number
+      const yearOfBirth = "20" + sequentialNumber; // Assuming all NIC holders were born in the 20th century
+
+      const outputDiv = document.getElementById('output');
+      outputDiv.innerHTML = `<p>Year of Birth: ${yearOfBirth}</p>`;
+    }
+  </script>
+</body>
+</html>
