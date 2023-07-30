@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day of the Week</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Day of the Week</h1>
+  <button onclick="getDay()">Get Day</button>
+  <div id="output"></div>
+
+  <script>
+    function getDay() {
+      const userInput = parseInt(prompt("Enter a number from 1 to 7:"));
+
+      if (isNaN(userInput) || userInput < 1 || userInput > 7) {
+        alert("Invalid input. Please enter a number from 1 to 7.");
+        return;
+      }
+
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const dayOfWeek = days[userInput - 1];
+
+      const outputDiv = document.getElementById('output');
+      outputDiv.innerHTML = `<p>It is ${dayOfWeek}.</p>`;
+    }
+  </script>
+</body>
+</html>
