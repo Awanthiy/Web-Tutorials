@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circle Area Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      margin: 5px;
+    }
+
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+   
+  <button onclick="calculateArea()">Calculate Area</button>
+  <div id="output"></div>
+
+  <script>
+    function calculateArea() {
+      const radius = parseFloat(prompt("Enter the radius of the circle:"));
+      
+      if (isNaN(radius)) {
+        alert("Invalid input. Please enter a valid number for the radius.");
+        return;
+      }
+
+      const area = (22 / 7) * Math.pow(radius, 2);
+      const outputDiv = document.getElementById('output');
+      outputDiv.innerHTML = `<p>Area of the circle: ${area.toFixed(2)}</p>`;
+    }
+  </script>
+</body>
+</html>
